@@ -1,0 +1,130 @@
+[
+  {
+    "trigger": "hello",
+    "response": "Hello! How can I help you today?"
+  },
+  {
+    "trigger": "hours",
+    "response": "Our office hours are 9am to 6pm, Monday to Friday."
+  },
+  {
+    "trigger": "bye",
+    "response": "Goodbye! Have a nice day!"
+  },
+  {
+    "trigger": "default",
+    "response": "Sorry, I don't understand. Can you rephrase?"
+  },
+  {
+    "trigger": "sell",
+    "response": "My website sells computer gaming products such as consoles, keyboards, mice, headphones, and monitors."
+  },
+  {
+    "trigger": "products",
+    "response": "We sell a wide range of gaming products including consoles, keyboards, mice, headphones, and monitors."
+  },
+  {
+    "trigger": "console",
+    "response": "We have the latest gaming consoles from all major brands. You can check them out in our Consoles section."
+  },
+  {
+    "trigger": "keyboard",
+    "response": "Looking for gaming keyboards? We offer mechanical and RGB keyboards perfect for gamers."
+  },
+  {
+    "trigger": "mouse",
+    "response": "We have gaming mice with high DPI, customizable buttons, and ergonomic designs."
+  },
+  {
+    "trigger": "headphone",
+    "response": "Check out our gaming headphones with surround sound and noise cancellation for immersive gaming."
+  },
+  {
+    "trigger": "monitor",
+    "response": "Our gaming monitors include high refresh rate displays and 4K options for smooth gameplay."
+  },
+  {
+    "trigger": "support",
+    "response": "If you need help, you can contact our support team via email or live chat on our website."
+  },
+  {
+    "trigger": "payment",
+    "response": "We accept credit cards, PayPal, and other secure payment methods."
+  },
+  {
+    "trigger": "about your website",
+    "response": "GameZone Your Ultimate Gaming Store 🎮 offers a wide range of high-quality computer and gaming products, including gaming consoles, keyboards, mice, headphones, and monitors. Our mission is to provide gamers with the best gear for immersive and competitive gameplay. On our website, you can browse product categories, enjoy secure checkout options like credit cards and PayPal, and benefit from fast nationwide shipping with reliable tracking. We also offer regular promotions and discounts to make top-tier gaming equipment more accessible, along with responsive customer support via live chat or email. Whether you're a casual gamer or a professional, GameZone delivers carefully selected products from trusted brands, excellent customer service, and a smooth online shopping experience to help you level up your gaming setup."
+  },
+  {
+    "trigger":"help",
+    "response": "Yes, I can! How can I help you?"
+  },
+  {
+    "trigger": "discount",
+    "response": "Yes, we offer discounts! Spend less than $5,000 → 0.5% off  Spend less than $10,000 → 1% off  Spend more than $10,000 → 15% off"
+  },
+{
+"trigger": "សួស្តី",
+"response": "សួស្តី! តើខ្ញុំអាចជួយអ្នកបានយ៉ាងដូចម្តេចនៅថ្ងៃនេះ?"
+},
+{
+"trigger": "ម៉ោង",
+"response": "ម៉ោងធ្វើការ៖ ពីម៉ោង ៩:០០ ព្រឹក ដល់ ៦:០០ ល្ងាច, ថ្ងៃចន្ទ ដល់ ថ្ងៃសុក្រ។"
+},
+{
+"trigger": "លា",
+"response": "លាហើយ! សូមមានថ្ងៃល្អ!"
+},
+{
+"trigger": "លំនាំដើម",
+"response": "សូមអភ័យទោស ខ្ញុំមិនយល់ទេ។ តើអ្នកអាចពន្យល់ឡើងវិញបានទេ?"
+},
+{
+"trigger": "លក់",
+"response": "គេហទំព័ររបស់ខ្ញុំលក់ផលិតផលហ្គេមកុំព្យូទ័រដូចជា គុងសូល ក្តារចុច កណ្ដុរ កាស និង ម៉ូនីទ័រ។"
+},
+{
+"trigger": "ផលិតផល",
+"response": "យើងមានលក់ផលិតផលហ្គេមចម្រង់ធំ រួមមាន គុងសូល ក្តារចុច កណ្ដុរ កាស និង ម៉ូនីទ័រ។"
+},
+{
+"trigger": "គុងសូល",
+"response": "យើងមានគុងសូលហ្គេមថ្មីៗពីគ្រប់ម៉ាកដ៏សំខាន់ៗ។ អ្នកអាចមើលព័ត៍មានទាំងនេះនៅផ្នែក 'Consoles' លើគេហទំព័រយើង។"
+},
+{
+"trigger": "ក្តារចុច",
+"response": "កំពុងស្វែងរកក្តារចុចហ្គេមទេ? យើងផ្តល់ជូនក្តារចុចម៉េកានិច និងក្តារចុច RGB ដែលសាកសមសម្រាប់អ្នកលេងហ្គេម។"
+},
+{
+"trigger": "កណ្ដុរ",
+"response": "យើងមានកណ្ដុរហ្គេមដែលមាន DPI ខ្ពស់ ប៊ូតុងអាចកំណត់បាន និងរចនាបែបអឺរុ្គូមីទ្រី (សម្រួលដល់ដៃ)។"
+},
+{
+"trigger": "កាស",
+"response": "សូមពិនិត្យកាសហ្គេមរបស់យើង ដែលមានសម្លេងជុំវិញ និងបច្ចេកវិទ្យាបិទសំលេងរំខាន សម្រាប់បទពិសោធន៍ហ្គេមដែលចូលចិត្ត។"
+},
+{
+"trigger": "ម៉ូនីទ័រ",
+"response": "ម៉ូនីទ័រហ្គេមរបស់យើងមានអេក្រង់អត្រាបន្ទាន់ខ្ពស់ និងជម្រើស 4K សម្រាប់ការលេងហ្គេមរលូន។"
+},
+{
+"trigger": "គាំទ្រ",
+"response": "បើអ្នកត្រូវការជំនួយ អ្នកអាចទំនាក់ទំនងក្រុមគាំទ្រយើងតាមអ៊ីមែល ឬជជែកផ្ទាល់លើគេហទំព័រ។"
+},
+{
+"trigger": "ការទូទាត់",
+"response": "យើងទទួលបង់ប្រាក់ដោយកាតឥណទាន, PayPal, និងវិធីបង់ប្រាក់ផ្សេងទៀតដែលមានសុវត្ថិភាព។"
+},
+{
+"trigger": "អំពីគេហទំព័ររបស់អ្នក",
+"response": "GamgeXtream — ហាងហ្គេមដ៏ពេញលេញ 🎮 ផ្តល់ជូនជួរផលិតផលគុណភាពខ្ពស់ សម្រាប់កុំព្យូទ័រ និងហ្គេម រួមមាន គុងសូល ក្តារចុច ម៉ៅ កាស និង ម៉ូនីទ័រ។ បេសកកម្មរបស់យើងគឺផ្តល់ឧបករណ៍ល្អៗសម្រាប់បទពិសោធន៍ហ្គេមដែលចូលចិត្ត និងសម្រាប់ការប្រកួត។ នៅលើគេហទំព័រយើង អ្នកអាចរកមើលប្រភេទផលិតផល ចំណាយដោយប្រព័ន្ធទូទាត់ដែលមានសុវត្ថិភាព ដូរទទួលការដឹកជញ្ជូនលឿនជាតិទាំងមូល និងមានលេខតាមដាន មוערការផ្សព្វផ្សាយ និងការបញ្ចុះតម្លៃជាប្រចាំ។ ក៏ដូចជា យើងផ្តល់សេវាកម្មគាំទ្រអតិថិជនឆាប់រហ័សតាមជជែកផ្ទាល់ ឬអ៊ីមែល។ មិនថាអ្នកជាអ្នកលេងធម្មតា រឺជាអ្នកប្រកួត ក៏ GameZone ផ្តល់ផលិតផលដែលបានជ្រើសរើសពីម៉ាកដែលទុកចិត្តបាន សេវាកម្មល្អ និងបទពិសោធន៍ការជាវលើអ៊ីនធឺណិតដែលងាយស្រួល ដើម្បីជួយអ្នកបង្កើនសមត្ថភាពកំណត់សំណុំឧបករណ៍ហ្គេមរបស់អ្នក។"
+},
+{
+"trigger": "ជួយ",
+"response": "បាន។ ខ្ញុំអាចជួយបាន! តើអ្នកត្រូវការជួយអ្វី?"
+},
+{
+"trigger": "បញ្ចុះតម្លៃ",
+"response": "បាទ/ចាស យើងមានការបញ្ចុះតម្លៃ! ៖\nចំណាយតិចជាង $5,000 → បញ្ចុះ 0.5%\nចំណាយតិចជាង $10,000 → បញ្ចុះ 1%\nចំណាយលើស $10,000 → បញ្ចុះ 15%"
+}
+]
