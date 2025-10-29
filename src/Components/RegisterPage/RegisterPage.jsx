@@ -48,6 +48,9 @@ const Login = () => {
   localStorage.setItem("users", JSON.stringify(existingUsers));
 
   alert("Register successfully!");
+  setUsername("")
+  setEmail("")
+  setPassword("")
   navigate("/login");
 };
   // prenvew image
@@ -62,7 +65,7 @@ const Login = () => {
 
 
   return (
-    <div className='flex justify-center items-center h-screen bg-linear-to-tl from-fuchsia-400 via-purple-400 to-teal-400'>
+    <div className='flex justify-center items-center h-screen bg-linear-to-tl from-fuchsia-400 via-purple-400 to-purple-500'>
         <form 
         onSubmit={handleSubmit}
         className='w-[700px]  bg-zinc-500/80 backdrop-blur-2xl rounded-lg p-10'>
@@ -78,13 +81,13 @@ const Login = () => {
                     <input 
                     value={email}
                     onChange={(e)=>setEmail(e.target.value)}
-                    type="email" name="" id="" className='w-full h-full outline-0 p-3 focus:bg-zinc-400 transition-all duration-300 ease-in-out' placeholder='Enter email...' />
+                    type="email" className='w-full h-full outline-0 p-3 focus:bg-zinc-400 transition-all duration-300 ease-in-out' placeholder='Enter email...' />
                 </div>
                 <div className='w-full h-[45px] bg-zinc-300 rounded-lg overflow-hidden'>
                     <input 
                     value={password}
                     onChange={(e)=>setPassword(e.target.value)}
-                    type="password" name="" id="" className='w-full h-full outline-0 p-3 focus:bg-zinc-400 transition-all duration-300 ease-in-out' placeholder='Enter password...' />
+                    type="password" className='w-full h-full outline-0 p-3 focus:bg-zinc-400 transition-all duration-300 ease-in-out' placeholder='Enter password...' />
                 </div>
                 {
                   preview===null ? (

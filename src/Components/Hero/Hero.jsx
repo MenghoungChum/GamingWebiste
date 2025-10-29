@@ -33,7 +33,7 @@ const Hero = () => {
                 </div>
             </div>
             <div className='relative md:w-[50%] w-full'>
-                <div className='animate__animated animate__bounceIn overflow-hidden rounded-3xl p-3 border-2 border-teal-600 dark:border-fuchsia-500 shadow-[0_10px_20px_#00bc7d] dark:shadow-[0_10px_20px_#ff96ff]'>
+                <div className='animate__animated animate__bounceIn overflow-hidden rounded-3xl p-3 border-2 border-fuchsia-500 dark:border-fuchsia-500 shadow-[0_10px_20px_#ff65ff] dark:shadow-[0_10px_20px_#ff96ff]'>
                     <img src={Gaming} alt="" className='rounded-3xl' />
                 </div>
                 <span className='absolute float -bottom-10 -left-8 flex items-center gap-2 border-2 border-fuchsia-500 rounded-2xl px-4 py-3 bg-black shadow-[0_10px_20px_#ed48ed]'>

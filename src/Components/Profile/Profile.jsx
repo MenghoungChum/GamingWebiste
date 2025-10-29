@@ -136,7 +136,7 @@ const Profile = () => {
       <div className="max-w-[1440px] md:px-10 mx-auto py-30">
         {/* Profile */}
         <div className=" w-full h-[400px] flex items-center flex-col px-10">
-          <div className="w-full bg-gradient-to-r from-[#1a0026] via-[#001a26] to-[#001a1a] dark:bg-gradient-to-r dark:from-white dark:via-gray-200 dark:to-white  lg:w-[40%] h-full flex flex-col items-center justify-center rounded-xl shadow-2xl dark:shadow-lg dark:shadow-white shadow-gray-500 border-2 border-gray-500">
+          <div className="w-full bg-gradient-to-r from-[#1a0026] via-[#001a26] to-[#001a1a] dark:bg-gradient-to-r dark:from-white dark:via-gray-200 dark:to-white  lg:w-[40%] h-full flex flex-col items-center justify-center rounded-xl shadow-md dark:shadow-lg dark:shadow-white shadow-gray-500 border-2 border-gray-500">
             <div className="relative w-[200px] h-[200px] rounded-full overflow-hidden ring-4 ring-gray-500 group">
               <img
                 src={isLogin.image}
@@ -174,16 +174,16 @@ const Profile = () => {
               <tbody>
                 {
                   cart.map(item=> (
-                    <tr className="hover:bg-gray-50 group transition-all duration-300 ease-in-out border-t-2 border-t-gray-500">
+                    <tr className="hover:bg-gray-50 dark:hover:bg-black/75 group transition-all duration-300 ease-in-out border-t-2 border-t-gray-500">
                       <td className="p-2">
                         <img
                           src={item.image}
                           className="w-16 h-16 object-cover rounded"
                         />
                       </td>
-                      <td className="p-2 text-white group-hover:text-black dark:text-black">{item.name}</td>
-                      <td className="p-2 text-center text-white group-hover:text-black dark:text-black">${item.price}</td>
-                      <td className="p-2 text-center text-white group-hover:text-black">
+                      <td className="p-2 text-white group-hover:text-black dark:text-black dark:group-hover:text-white">{item.name}</td>
+                      <td className="p-2 text-center text-white group-hover:text-black dark:text-black dark:group-hover:text-white">${item.price}</td>
+                      <td className="p-2 text-center text-white group-hover:text-black dark:group-hover:text-white">
                         <div className="h-full items-center flex md:gap-4 gap-2">
                           <span 
                             onClick={()=>{
@@ -192,19 +192,19 @@ const Profile = () => {
                                 removeAddTocart1(item.id)
                               }
                             }}
-                            className="group-hover:text-black group-hover:border-zinc-500 w-8 h-8  rounded-lg border border-white dark:text-black dark:border-zinc-500 text-white flex items-center justify-center font-bold"><FaMinus /></span>
-                            <span className="group-hover:text-black   text-white dark:text-black">{item.qty}</span>
+                            className="group-hover:text-black group-hover:border-zinc-500 w-8 h-8  rounded-lg border border-white dark:text-black dark:border-zinc-500 text-white flex items-center justify-center font-bold dark:group-hover:text-white"><FaMinus /></span>
+                            <span className="group-hover:text-black   text-white dark:text-black dark:group-hover:text-white">{item.qty}</span>
                             <span 
                               onClick={()=>increaeQty(item.id)}
-                              className="group-hover:text-black group-hover:border-zinc-500 w-8 h-8  rounded-lg cursor-pointer border border-white dark:text-black dark:border-zinc-500 text-white flex items-center justify-center font-bold"><FaPlus />
+                              className="group-hover:text-black group-hover:border-zinc-500 w-8 h-8  rounded-lg cursor-pointer border border-white dark:text-black dark:border-zinc-500 text-white flex items-center justify-center font-bold dark:group-hover:text-white"><FaPlus />
                             </span>
                         </div>
                       </td>
-                      <td className="p-2 text-center text-white group-hover:text-black dark:text-black hidden md:block">${totalPrice}</td>
+                      <td className="p-2 text-center text-white group-hover:text-black dark:text-black hidden md:block dark:group-hover:text-white">${totalPrice}</td>
                       <td className="p-2 text-center">
                         <button
                         onClick={()=> removeAddTocart(item.id)}
-                          className="text-red-500 font-bold hover:text-red-700 text-white group-hover:text-black dark:text-black"
+                          className="text-red-500 font-bold hover:text-red-700 text-white group-hover:text-black dark:text-black dark:group-hover:text-white"
                         >
                           ✕
                         </button>
@@ -216,7 +216,7 @@ const Profile = () => {
             </table> 
           </div>
           {/*Payment  */}
-          <div className="lg:w-[29%] w-full px-10 h-fit rounded-xl  bg-gradient-to-br from-[#1a0b1f] via-[#0c0612] to-[#0a0b14] dark:bg-gradient-to-tl dark:from-white dark:via-gray-200 dark:to-white sticky top-28  shadow-[0_0_10px_#cbcbcb] p-8">
+          <div className="lg:w-[28%] w-full px-10 h-fit rounded-xl  bg-gradient-to-br from-[#1a0b1f] via-[#0c0612] to-[#0a0b14] dark:bg-gradient-to-tl dark:from-white dark:via-gray-200 dark:to-white sticky top-28  shadow-[0_0_10px_#cbcbcb] p-8">
             <h5 className="text-white mb-10 text-2xl font-bold dark:text-black">Order Summary</h5>
             <div>
               <div className="flex justify-between items-center">
@@ -250,8 +250,8 @@ const Profile = () => {
         </div>
       </div>
       {/* alert payment */}
-      <div className={`fixed  inset-0 bg-black z-50 flex justify-center flex-col items-center transition-all duration-300 ease-in-out ${showPay ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-      <h5 className="text-center text-5xl mb-10 text-white font-bold">Please Pay</h5>
+      <div className={`fixed  inset-0 bg-white/20 backdrop-blur-2xl z-50 flex justify-center flex-col items-center transition-all duration-300 ease-in-out ${showPay ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+      <h5 className="text-center text-5xl mb-10 text-black font-bold">Please Pay</h5>
         <div>
           <form className="bg-zinc-400 p-8 rounded-lg  md:w-[500px]">
             <div className="mb-6">

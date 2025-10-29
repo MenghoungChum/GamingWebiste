@@ -48,7 +48,7 @@ const Navbar = () => {
                                 key={item.id}
                                 to={`/${item.name}`} 
                                 onClick={()=>setActive(item.name)}
-                                className={`active:text-fuchsia-700 py-2 hover:text-fuchsia-500 cursor-pointer font-semibold text-sm duration-300 transition-all ease-in-out  relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-linear-to-r before:from-fuchsia-500 before:to-purple-500 before:transition-all before:duration-300 hover:before:w-full ${item.name ==active ? 'before:absolute before:bottom-0 before:w-full before:h-[2px] before:bg-linear-to-r before:from-fuchsia-500 before:to-purple-500 text-white' : 'text-white' }`}><a href='#'>{item.name}</a></Link>
+                                className={`active:text-fuchsia-700 py-2 hover:text-fuchsia-500 cursor-pointer font-semibold text-sm duration-300 transition-all ease-in-out  relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-linear-to-r before:from-fuchsia-500 before:to-purple-500 before:transition-all before:duration-300 hover:before:w-full ${item.name ==active ? 'before:absolute before:bottom-0 before:w-full before:h-[2px] before:bg-linear-to-r before:from-fuchsia-500 before:to-purple-500 text-white' : 'text-white' }`}>{item.name}</Link>
                             ))
                         }
                     </ul>
@@ -104,7 +104,7 @@ const Navbar = () => {
                             to={`/${item.name}`}
                             key={item.id}
                             onClick={()=>setActive(item.name)}
-                            className={`block lg:px-4 px-2 py-3 hover:bg-fuchsia-500 cursor-pointer font-semibold text-sm duration-300 transition-all ease-in-out text-white ${item.name===active ? 'bg-black text-white' : ''} transition-all duration-300 ease-in-out`} ><a href='#' >{item.name}</a></Link>
+                            className={`block lg:px-4 px-2 py-3 hover:bg-fuchsia-500 cursor-pointer font-semibold text-sm duration-300 transition-all ease-in-out text-white ${item.name===active ? 'bg-black text-white' : ''} transition-all duration-300 ease-in-out`} >{item.name}</Link>
                         ))
                     }
                 </ul>
@@ -130,24 +130,24 @@ const Navbar = () => {
                 </div>
             </div>
             {/* Add to card side */}
-            <div className={`lg:w-[30%] w-[75%] md:w-1/2 fixed right-0 z-40 h-[calc(100vh-10vh)] bg-linear-to-t from-fuchsia-200 via-purple-200 to-pink-200 border border-fuchsia-300 transform ${addToggle ? 'translate-x-0' : 'translate-x-full'} transition-all duration-300 ease-in-out`}>
+            <div className={`lg:w-[30%] w-[75%] md:w-1/2 fixed right-0 z-40 h-[calc(100vh-10vh)] bg-gradient-to-r from-[#1a0026] via-[#001a26] to-[#001a1a] dark:from-zinc-300 dark:via-zinc-300 dark:to-zinc-300 dark:backdrop-blur-2xl transform ${addToggle ? 'translate-x-0' : 'translate-x-full'} transition-all duration-300 ease-in-out`}>
                 <header className='w-full h-[100px] border-b border-b-zinc-500 flex items-center p-4 relative'>
-                    <h4 className='lg:text-4xl text-2xl font-bold text-white [text-shadow:0_0_10px_#ff2828,0_0_20px_#ff2828,0_0_30px_#ff2828] flex items-center gap-3'><LuClipboardList /> Product List</h4>
+                    <h4 className='lg:text-4xl text-2xl font-bold text-white [text-shadow:0_0_10px_#ff65ff,0_0_20px_#ff65ff,0_0_30px_#ff65ff] flex items-center gap-3'><LuClipboardList /> Product List</h4>
                     <span 
                     onClick={()=>setAddToggle(false)}
-                    className='absolute w-8 h-8 rounded-full hover:bg-red-500 hover:text-white transition-all duration-300 ease-in-out lg:top-3 right-6 top-3 lg:right-3 flex items-center justify-center lg:text-3xl text-xl'><MdClear /></span>
+                    className='absolute w-8 h-8 rounded-full hover:bg-red-500 hover:text-white text-white transition-all duration-300 ease-in-out lg:top-3 right-6 top-3 lg:right-3 flex items-center justify-center lg:text-3xl text-xl'><MdClear /></span>
                 </header>
                 <div className='p-3 flex flex-col gap-4 w-full md:max-h-[670px] max-h-[480px] lg:max-h-[510px] overflow-scroll deleteScroll'>
                     {
                         cart.length >0 ? (
                             cart.map(item=>(
-                                <div key={item.id} className='flex justify-between w-full min-h-[100px] bg-linear-to-r from-teal-500 to-purple-500 rounded-lg gap-3 items-center relative'>
+                                <div key={item.id} className='flex justify-between w-full min-h-[100px] bg-linear-to-r from-zinc-500 to-zinc-600 dark:from-white dark:to-white rounded-lg gap-3 items-center relative'>
                                     <div className='w-[30%] h-[100px] p-1 rounded-lg overflow-hidden'>
                                         <img src={item.image} className='w-full h-full object-cover' alt="" />
                                     </div>
                                     <div className='flex-1'>
-                                        <h4 className='font-medium lg:text-xl text-white'>Name: <span className='line-clamp-1 text-sm'>{item.name}</span></h4>
-                                        <p className='lg:text-base text-sm text-white'>Price: {item.price}</p>
+                                        <h4 className='font-medium lg:text-xl text-white dark:text-black'>Name: <span className='line-clamp-1 text-sm'>{item.name}</span></h4>
+                                        <p className='lg:text-base text-sm text-white dark:text-black'>Price: {item.price}</p>
                                     </div>
                                     <div className='flex items-center gap-2 mr-6'>
                                         <span 
@@ -158,7 +158,7 @@ const Navbar = () => {
                                             }
                                         }}
                                         className='w-6 h-6 rounded-full bg-red-500 text-white flex justify-center items-center cursor-pointer active:bg-red-700'><FaMinus /></span>
-                                        <span>{item.qty}</span>
+                                        <span className='text-white dark:text-black'>{item.qty}</span>
                                         <span 
                                         onClick={()=>increaeQty(item.id)}
                                         className='w-6 h-6 rounded-full bg-green-500 text-white flex justify-center items-center cursor-pointer active:bg-green-700'><FaPlus /></span>

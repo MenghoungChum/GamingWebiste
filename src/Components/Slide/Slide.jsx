@@ -8,10 +8,10 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
-import slide1 from '../../assets/Slide_Image1.jpg'
-import slide2 from '../../assets/Slide_image2.jpg'
-import slide3 from '../../assets/Slide_image3.jpg'
-import slide4 from '../../assets/Slide_image4.jpg'
+import slide1 from '../../assets/SlideImage1.jpg'
+import slide2 from '../../assets/Slideimage2.jpg'
+import slide3 from '../../assets/Slideimage3.jpg'
+import slide4 from '../../assets/Slideimage4.jpg'
 
 const Slide = () => {
   return (
@@ -37,6 +37,7 @@ const Slide = () => {
             slidData.map(item=>(
                 <SwiperSlide>
                     <div 
+                    key={item.id}
                     data-aos="flip-up"
                     className='w-full h-[500px] bg-no-repeat bg-center bg-cover rounded-2xl border border-red-500 relative' style={{ backgroundImage: `url(${item.image})` }}>
                     <div className='absolute bottom-10 left-10'>
