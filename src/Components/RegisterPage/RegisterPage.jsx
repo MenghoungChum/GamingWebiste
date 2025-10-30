@@ -69,13 +69,13 @@ const Login = () => {
 
 
   return (
-    <div className={`flex justify-center items-center h-screen bg-cover bg-no-repeat bg-center`} style={{backgroundImage: `url(${Background})`}}>
-        <div className='flex items-center justify-center w-f '>
+    <div className={`flex justify-center items-center h-screen bg-cover bg-no-repeat bg-center px-8`} style={{backgroundImage: `url(${Background})`}}>
+        <div className='flex items-center justify-center w-full'>
           <form 
         onSubmit={handleSubmit}
-        className='md:w-[500px] w-full bg-white/10 backdrop-blur-2xl rounded-lg p-10'>
-            <h3 className='text-3xl text-white w-full text-center mb-8 font-bold'>Register</h3>
-            <div className='flex flex-col gap-4'>
+        className='md:w-[500px] w-full bg-white/10 backdrop-blur-2xl rounded-lg p-10 mt-20'>
+            <h3 className='text-3xl text-white w-full text-center mb-4 font-bold'>Register</h3>
+            <div className='flex flex-col gap-2 md:gap-4'>
                 <div className='flex flex-col gap-2'>
                   <label className='text-white text-lg font-bold'>First Name</label>
                   <div className='w-full h-[45px] rounded-full overflow-hidden border border-white relative'>

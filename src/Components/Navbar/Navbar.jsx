@@ -13,7 +13,7 @@ import { AllProductsList } from '../ProductList/ProductList'
 import DarkMode from '../DarkMode/DarkMode'
 
 const Navbar = () => {
-    const {cart,removeAddTocart,increaeQty,decreaesQty,fav,removeAddTocartAllPro}=useContext(CartContext);
+    const {cart,removeAddTocart,increaeQty,decreaesQty,fav,removeAddTocartAllPro,setCart,setFav}=useContext(CartContext);
     const [toggle,setToggle]=useState(false);
     const [addToggle,setAddToggle]=useState(false);
     const [query,setQuery]=useState('');
@@ -27,6 +27,8 @@ const Navbar = () => {
         localStorage.removeItem("loggedInUser");
         localStorage.removeItem("cart")
         localStorage.removeItem("favCart");
+        setCart([]);
+        setFav([])
     }
     const userLogin=JSON.parse(localStorage.getItem("loggedInUser"));
 
@@ -36,7 +38,7 @@ const Navbar = () => {
     const handleClickOutside = (event) => {
         if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
         setToggle(false);
-        setAddToggle(false)
+        // setAddToggle(false)
         }
     };
 
@@ -107,14 +109,14 @@ const Navbar = () => {
                         <DarkMode/>
                     </div>
                     <div className='hidden lg:block'>
-                        {!userLogin ? <Link to='/login' className='px-5 py-2 rounded-lg text-white bg-zinc-500 cursor-pointer'>Login</Link>: <a href='/Home' 
+                        {!userLogin ? <Link to='/login' className='px-5 py-2 rounded-lg text-white bg-zinc-500 cursor-pointer'>Login</Link>: <a href='#' 
                         onClick={()=>handleLogout()}
                         className='px-5 z-10 py-2 rounded-lg text-white bg-red-500 cursor-pointer flex items-center'><IoLogOutOutline className='text-2xl font-bold' /> Logout</a>}
                     </div>
                 </div>
             </nav>
             {/* Side bar */}
-            <div ref={sidebarRef} className={`md:w-[50%] w-[75%] fixed lg:hidden  h-[calc(100vh-14vh)] left-0 border-0 bg-zinc-600 transform ${toggle ? 'translate-x-0' : '-translate-x-full'} transition-all duration-300 ease-in-out`}>
+            <div ref={sidebarRef}  className={`md:w-[50%] w-[75%] fixed lg:hidden  h-[calc(100vh-14vh)] left-0 border-0 bg-zinc-600 transform ${toggle ? 'translate-x-0' : '-translate-x-full'} transition-all duration-300 ease-in-out`}>
                 <ul className='mt-5'>
                     {
                         navbar.map(item=>(
@@ -140,15 +142,15 @@ const Navbar = () => {
                 </div>
                 <div className='flex justify-between items-center px-3 py-3 w-full'>
                     <div className='lg:hidden'>
-                        {!userLogin ?<a href='/login' className='px-5 py-2 rounded-lg text-white bg-zinc-500 cursor-pointer'>Login</a> : <a href='/' 
+                        {!userLogin ?<Link to='/login' className='px-5 py-2 rounded-lg text-white bg-zinc-500 cursor-pointer'>Login</Link> : <Link to='/' 
                         onClick={()=>handleLogout()}
-                        className='px-5 z-10 py-2 rounded-lg text-white bg-zinc-500 cursor-pointer'>Logout</a>}
+                        className='px-5 z-10 py-2 rounded-lg text-white bg-zinc-500 cursor-pointer'>Logout</Link>}
                     </div>
                     <DarkMode/>
                 </div>
             </div>
             {/* Add to card side */}
-            <div ref={sidebarRef}  className={`lg:w-[30%] w-[75%] md:w-1/2 fixed right-0 z-40 h-[calc(100vh-10vh)] bg-gradient-to-r from-[#1a0026] via-[#001a26] to-[#001a1a] dark:from-zinc-300 dark:via-zinc-300 dark:to-zinc-300 dark:backdrop-blur-2xl transform ${addToggle ? 'translate-x-0' : 'translate-x-full'} transition-all duration-300 ease-in-out`}>
+            <div   className={`lg:w-[30%] w-[75%] md:w-1/2 fixed right-0 z-40 h-[calc(100vh-10vh)] bg-gradient-to-r from-[#1a0026] via-[#001a26] to-[#001a1a] dark:from-zinc-300 dark:via-zinc-300 dark:to-zinc-300 dark:backdrop-blur-2xl transform ${addToggle ? 'translate-x-0' : 'translate-x-full'} transition-all duration-300 ease-in-out`}>
                 <header className='w-full h-[100px] border-b border-b-zinc-500 flex items-center p-4 relative'>
                     <h4 className='lg:text-4xl text-2xl font-bold text-white [text-shadow:0_0_10px_#ff65ff,0_0_20px_#ff65ff,0_0_30px_#ff65ff] flex items-center gap-3'><LuClipboardList /> Product List</h4>
                     <span 

@@ -81,17 +81,18 @@ const App = () => {
         {
           path:'/chatbot',
           element: <Chatbot/>
+        },
+        {
+          path: '/login',
+          element: <Login/>
+        },
+        {
+          path: '/register',
+          element: <RegisterPage/>
         }
       ]
     },
-    {
-      path: '/login',
-      element: <Login/>
-    },
-    {
-      path: '/register',
-      element: <RegisterPage/>
-    }
+    
   ])
   return <RouterProvider router={router}/>
 }

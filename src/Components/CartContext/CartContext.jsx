@@ -146,7 +146,7 @@ export const CardProvider = ({children}) => {
     const totalQty=cart.reduce((acc,item)=>acc+item.qty,0)
     const discount= totalPrice >0 && totalPrice <=5000 ? 0.05 :totalPrice>5000 && totalPrice<=10000 ? 0.1 : totalPrice>10000 ? 0.15: 0;
   return (
-    <CartContext.Provider value={{addTocart,removeAddTocart1,cart,setCart,removeAddTocart,increaeQty,decreaesQty,fav,addToFavourite,favActive,setFavActive,removeFav,removeAddTocartAllPro,userLogin,totalPrice,totalQty,discount}}>
+    <CartContext.Provider value={{addTocart,removeAddTocart1,cart,setCart,removeAddTocart,increaeQty,decreaesQty,fav,setFav,addToFavourite,favActive,setFavActive,removeFav,removeAddTocartAllPro,userLogin,totalPrice,totalQty,discount}}>
         {children}
     </CartContext.Provider>
   )
