@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { FaLock, FaLockOpen, FaUserAlt } from 'react-icons/fa';
 import { IoLockClosedOutline } from 'react-icons/io5';
 import { Link, useNavigate } from 'react-router-dom';
+import Background from '../../assets/BackloginRegister.gif'
 
 const Login = () => {
     const [email,setEmail]=useState("");
@@ -36,7 +37,7 @@ const Login = () => {
         setPassword("")
     }
   return (
-    <div className="flex justify-center items-center h-screen bg-[url('https://i.pinimg.com/originals/34/1e/80/341e800b1f29d3e34ea2eba5a6af205c.gif')] bg-cover bg-no-repeat bg-center">
+    <div className="flex justify-center items-center h-screen bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url(${Background})`}}>
         <div className='flex justify-center items-center'>
             <form 
             onSubmit={handleLogin}

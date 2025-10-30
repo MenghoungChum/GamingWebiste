@@ -96,18 +96,18 @@ const Chatbot = () => {
           </div>
             {/* Chatbot footer */}
           <div className="p-4">
-                <div className='w-full border border-gray-400 rounded-full flex p-2'>
+                <div className='w-full border border-gray-400 rounded-full flex p-2 relative'>
                     <input
                     type="text"
                     placeholder="Type a message..."
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    required className='peer text-white dark:text-zinc-500 flex-1 outline-0'
+                    required className='peer text-white dark:text-zinc-500 flex-1 outline-0 '
                     />
                     <button
                     onClick={handleSend}
-                    className='px-4 py-2 w-8 h-8 rounded-full flex items-center justify-center border border-zinc-500 text-white bg-blue-500 cursor-pointer opacity-0 peer-valid:opacity-100 transition-opacity duration-300 '>
+                    className='px-4 py-2 w-8 h-8 rounded-full flex items-center justify-center border absolute right-1 top-1 border-zinc-500 text-white bg-blue-500 cursor-pointer opacity-0 peer-valid:opacity-100 transition-opacity duration-300 '>
                         <span><HiArrowUp /></span>
                     </button>
                 </div>

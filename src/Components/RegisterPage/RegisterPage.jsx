@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import previewImage from '../../assets/Preview.png'
 import { FaLock, FaLockOpen, FaUserAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import Background from '../../assets/BackloginRegister.gif'
 
 const Login = () => {
     const [email,setEmail]=useState("");
@@ -68,10 +69,11 @@ const Login = () => {
 
 
   return (
-    <div className="flex justify-center items-center h-screen bg-[url('https://i.pinimg.com/originals/34/1e/80/341e800b1f29d3e34ea2eba5a6af205c.gif')] bg-cover bg-no-repeat bg-center">
-        <form 
+    <div className={`flex justify-center items-center h-screen bg-cover bg-no-repeat bg-center`} style={{backgroundImage: `url(${Background})`}}>
+        <div className='flex items-center justify-center w-f '>
+          <form 
         onSubmit={handleSubmit}
-        className='w-[500px]  bg-white/30 backdrop-blur-2xl rounded-lg p-10'>
+        className='md:w-[500px] w-full bg-white/10 backdrop-blur-2xl rounded-lg p-10'>
             <h3 className='text-3xl text-white w-full text-center mb-8 font-bold'>Register</h3>
             <div className='flex flex-col gap-4'>
                 <div className='flex flex-col gap-2'>
@@ -143,7 +145,8 @@ const Login = () => {
                 Login
             </span>
             </p>
-        </form>
+          </form>
+        </div>
     </div>
   )
 }
