@@ -3,6 +3,8 @@
 import React, { use, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import previewImage from '../../assets/Preview.png'
+import { FaLock, FaLockOpen, FaUserAlt } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 const Login = () => {
     const [email,setEmail]=useState("");
@@ -10,6 +12,7 @@ const Login = () => {
     const [password,setPassword]=useState("")
     const [image,setImage]=useState(null);
      const [preview, setPreview] = useState(null);
+    const [showPassword,setShowPassword]=useState(false)
     const navigate=useNavigate();
     // handleSubmite
     const handleSubmit = async (e) => {
@@ -65,29 +68,43 @@ const Login = () => {
 
 
   return (
-    <div className='flex justify-center items-center h-screen bg-linear-to-tl from-fuchsia-400 via-purple-400 to-purple-500'>
+    <div className="flex justify-center items-center h-screen bg-[url('https://i.pinimg.com/originals/34/1e/80/341e800b1f29d3e34ea2eba5a6af205c.gif')] bg-cover bg-no-repeat bg-center">
         <form 
         onSubmit={handleSubmit}
-        className='w-[700px]  bg-zinc-500/80 backdrop-blur-2xl rounded-lg p-10'>
-            <h1 className='text-3xl text-zinc-500 w-full text-center mb-8 font-bold [text-shadow:0_0_10px_#ffffff,0_0_20px_#ffffff,0_0_30px_#ffffff]'>Register</h1>
+        className='w-[500px]  bg-white/30 backdrop-blur-2xl rounded-lg p-10'>
+            <h3 className='text-3xl text-white w-full text-center mb-8 font-bold'>Register</h3>
             <div className='flex flex-col gap-4'>
-                <div className='w-full h-[45px] bg-zinc-300 rounded-lg overflow-hidden'>
+                <div className='flex flex-col gap-2'>
+                  <label className='text-white text-lg font-bold'>First Name</label>
+                  <div className='w-full h-[45px] rounded-full overflow-hidden border border-white relative'>
                     <input 
                     value={username}
                     onChange={(e)=>setUsername(e.target.value)}
-                    type="text" className='w-full h-full outline-0 p-3 focus:bg-zinc-400 transition-all duration-300 ease-in-out' placeholder='Enter username...' />
+                    type="text" className='w-full h-full outline-0 p-3 transition-all duration-300 ease-in-out text-white' placeholder='Jonh Cina' />
+                    <span className='text-xl absolute right-4 top-3 text-white cursor-pointer'><FaUserAlt /></span>
+                  </div>
                 </div>
-                <div className='w-full h-[45px] bg-zinc-300 rounded-lg overflow-hidden'>
+                <div className='flex flex-col gap-2'>
+                  <label className='text-white text-lg font-bold'>Email</label>
+                  <div className='w-full h-[45px] rounded-full overflow-hidden border border-white relative'>
                     <input 
                     value={email}
                     onChange={(e)=>setEmail(e.target.value)}
-                    type="email" className='w-full h-full outline-0 p-3 focus:bg-zinc-400 transition-all duration-300 ease-in-out' placeholder='Enter email...' />
+                    type="email" className='w-full h-full outline-0 p-3 transition-all duration-300 ease-in-out text-white' placeholder='Jonh@gmail.com' />
+                    <span className='text-xl absolute right-4 top-3 text-white cursor-pointer'><MdEmail /></span>
+                  </div>
                 </div>
-                <div className='w-full h-[45px] bg-zinc-300 rounded-lg overflow-hidden'>
+                <div className='flex flex-col gap-2'>
+                  <label className='text-white text-lg font-bold'>Password</label>
+                  <div className='w-full h-[45px] rounded-full overflow-hidden border border-white relative'>
                     <input 
                     value={password}
                     onChange={(e)=>setPassword(e.target.value)}
-                    type="password" className='w-full h-full outline-0 p-3 focus:bg-zinc-400 transition-all duration-300 ease-in-out' placeholder='Enter password...' />
+                    type={ `${showPassword ? 'text': 'password'}`} className='w-full h-full outline-0 p-3 transition-all duration-300 ease-in-out text-white' placeholder='Enter password...' />
+                    <span 
+                    onClick={()=>setShowPassword(!showPassword)}
+                    className='text-xl absolute right-4 top-3 text-white cursor-pointer'>{showPassword ?<FaLockOpen />: <FaLock /> }</span>
+                  </div>
                 </div>
                 {
                   preview===null ? (
@@ -117,7 +134,7 @@ const Login = () => {
                   )
                 }
                 <div className='w-full'>
-                    <button type='submit' className='w-full py-2 rounded-lg text-white font-bold text-xl bg-linear-to-r from-pink-700 to-purple-500 cursor-pointer'>Register</button>
+                    <button type='submit' className='w-full py-2 rounded-full text-white font-bold text-xl bg-linear-to-r from-pink-700 to-purple-500 cursor-pointer'>Register</button>
                 </div>
             </div>
             <p className="text-center text-sm mt-4">Already have an account?{" "}<span

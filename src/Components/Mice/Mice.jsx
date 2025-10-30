@@ -8,6 +8,7 @@ import MouseBanner from '../../assets/MouseBanner.jpg'
 import { CartContext } from '../CartContext/CartContext'
 import { Link, useLocation } from 'react-router-dom'
 import { BiSolidCommentDetail } from 'react-icons/bi'
+import AOS from 'aos'
 
 
 const Mice = () => {
@@ -18,6 +19,13 @@ const Mice = () => {
         top: 0,
         });
     }, [pathname]);
+    useEffect(() => {
+            AOS.init({
+            duration: 1000, 
+            once: true,
+            offset: 200,
+        })
+    },[]);
   return (
     <section>
        <Banner imageBanner={MouseBanner} title="Mouse Gaming"/>

@@ -68,7 +68,7 @@ const Chatbot = () => {
   return (
     <section>
       <div className="max-w-[1440px] px-10 py-32 mx-auto flex items-center justify-center min-h-screen">
-        <div className="w-[500px] bg-gradient-to-r from-[#3b0a45] dark:bg-gradient-to-r dark:from-transparent dark:via-transparent dark:to-transparent border border-zinc-400 shadow-[0_0_10px_#e3e3e3] via-[#1a1a3b] to-[#003c1f] rounded-lg overflow-hidden '">
+        <div className="w-[500px] bg-gradient-to-r from-[#1a0026] via-[#001a26] to-[#001a1a] dark:bg-gradient-to-r dark:from-transparent dark:via-transparent dark:to-transparent border border-zinc-400 shadow-[0_0_10px_#e3e3e3] rounded-lg overflow-hidden '">
             {/* Chatbot header */}
             <div className='flex items-center justify-between bg-fuchsia-700 p-3 rounded-t-lg'>
                 <div className='flex items-center gap-2'>

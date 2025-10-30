@@ -25,51 +25,51 @@ const ContactUs = () => {
         <h4 className="text-5xl font-bold text-center text-white mt-10 dark:text-black" data-aos="fade-down">Get In Touch</h4>
         <p className="text-lg text-white text-center mt-3 dark:text-zinc-500" data-aos="fade-up">We're here for you! How can we help? Fill out the form below and we'll get <br /> back to you as soon as possible.</p>
         <div className="flex justify-center items-center mt-10" data-aos="fade-up">
-          <div className="p-5 rounded-lg flex flex-wrap gap-7 w-[800px] bg-zinc-500">
+          <div className="p-5 rounded-lg flex flex-wrap gap-7 w-[800px] bg-gradient-to-r from-[#1a0026] via-[#001a26] to-[#001a1a] border border-zinc-500 dark:bg-gradient-to-r dark:from-transparent dark:via-transparent dark:to-transparent">
             {/* Left Form */}
             <div className="md:w-[50%] w-full" data-aos="fade-right">
-              <h4 className="text-white text-2xl font-bold">Send us a Message</h4>
+              <h4 className="text-white text-2xl font-bold dark:text-black">Send us a Message</h4>
               <div className="mt-4">
-                <label htmlFor="name" className="text-white">Full name</label>
-                <input type="text" id="name" className="w-full h-[45px] rounded-md bg-white px-4 mt-2" placeholder="Enter full name..."/>
+                <label htmlFor="name" className="text-white dark:text-black">Full name</label>
+                <input type="text" id="name" className="w-full h-[45px] rounded-md bg-white dark:bg-zinc-300 px-4 mt-2" placeholder="Enter full name..."/>
               </div>
               <div className="my-5">
-                <label htmlFor="email" className="text-white">Email</label>
-                <input type="email" id="email" className="w-full h-[45px] rounded-md bg-white px-4 mt-2" placeholder="Enter email..."/>
+                <label htmlFor="email" className="text-white dark:text-black">Email</label>
+                <input type="email" id="email" className="w-full h-[45px] rounded-md bg-white dark:bg-zinc-300 px-4 mt-2" placeholder="Enter email..."/>
               </div>
               <div>
-                <label htmlFor="ms" className="text-white">Message</label>
-                <textarea id="ms" className="w-full h-[150px] rounded-md bg-white p-2 mt-2" placeholder="Enter message for helping..."></textarea>
+                <label htmlFor="ms" className="text-white dark:text-black">Message</label>
+                <textarea id="ms" className="w-full h-[150px] rounded-md bg-white dark:bg-zinc-300 p-2 mt-2" placeholder="Enter message for helping..."></textarea>
               </div>
               <button className="w-full py-2 rounded-lg text-white bg-blue-500 mt-6">Send Message</button>
             </div>
 
             {/* Right Contact Info */}
             <div cla sName="lg:w-[49%] w-full bg-zinc-800 rounded-lg p-8 bg-zinc-700" data-aos="fade-left">
-              <h4 className="text-2xl font-bold text-white">Contact Information</h4>
-              <div className="flex items-center mt-4 text-white gap-3">
+              <h4 className="text-2xl font-bold text-white dark:text-black">Contact Information</h4>
+              <div className="flex items-center mt-4 text-white dark:text-black gap-3">
                 <span className="text-2xl font-bold">
                   <IoLocationOutline />
                 </span>
                 <div>
-                  <p className="text-sky-200">Address</p>
-                  <p className="font-bold text-white text-xl">St 562, Phnom Penh 12151</p>
+                  <p className="text-sky-200 dark:text-black">Address</p>
+                  <p className="font-bold text-white text-xl dark:text-black">St 562, Phnom Penh 12151</p>
                 </div>
               </div>
 
-              <div className="flex items-center mt-4 text-white gap-3">
+              <div className="flex items-center mt-4 text-white dark:text-black gap-3">
                 <span className="text-2xl font-bold"><IoCallOutline /></span>
                 <div>
-                  <p className="text-sky-200">Phone</p>
-                  <p className="font-bold text-white text-xl">+855 123 456 789</p>
+                  <p className="text-sky-200 dark:text-black">Phone</p>
+                  <p className="font-bold text-white text-xl dark:text-black">+855 123 456 789</p>
                 </div>
               </div>
 
-              <div className="flex items-center mt-4 text-white gap-3">
+              <div className="flex items-center mt-4 text-white gap-3 dark:text-black">
                 <span className="text-2xl font-bold"><MdOutlineMailOutline /></span>
                 <div>
-                  <p className="text-sky-200">Email</p>
-                  <p className="font-bold text-white text-xl">VRaan@elearning.com</p>
+                  <p className="text-sky-200 dark:text-black">Email</p>
+                  <p className="font-bold text-white text-xl dark:text-black">GamingShop@elearning.com</p>
                 </div>
               </div>
               {/* Google Map */}

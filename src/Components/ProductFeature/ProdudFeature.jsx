@@ -18,7 +18,7 @@ const ProdudFeature = () => {
                       <button 
                       data-aos="zoom-in-up"
                       onClick={()=>setCategory(item)}
-                      key={item} className={`px-4 py-2 rounded-lg border-2 border-white dark:border-zinc-500 text-white dark:text-black hover:bg-red-500 active:bg-red-700 transition-all duration-300 ease-in-out ${category ==item ? 'bg-red-500 text-white' : 'bg-transparent text-black' }`}>{item}</button>
+                      key={item} className={`px-4 py-2 rounded-lg border-2 border-white dark:border-zinc-500 text-white dark:text-black hover:bg-fuchsia-500 active:bg-fuchsia-700 transition-all duration-300 ease-in-out ${category ==item ? 'bg-fuchsia-500 text-white' : 'bg-transparent text-black' }`}>{item}</button>
                     )
                   })
                 }

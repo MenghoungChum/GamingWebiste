@@ -13,6 +13,7 @@ import Testimonial from '../Testimonail/Testimonial'
 import Contact from '../Contact/Contact'
 import FirstVisitAlert from '../FirstAlert/FirstAlert'
 import Discount from '../Discount/Discount'
+import { FaRegMessage } from 'react-icons/fa6'
   const Home = () => {
 
   return (
@@ -30,6 +31,7 @@ import Discount from '../Discount/Discount'
         <Live/>
         <Testimonial/>
         <Contact/>
+        <p className='fixed bottom-0 right-0'><FaRegMessage /></p>
     </div>
   )
 }

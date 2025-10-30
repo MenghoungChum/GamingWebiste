@@ -8,6 +8,7 @@ import MonitorsBanner from '../../assets/MonitorBanner.jpg'
 import { CartContext } from '../CartContext/CartContext'
 import { Link, useLocation } from 'react-router-dom'
 import { BiSolidCommentDetail } from 'react-icons/bi'
+import AOS from 'aos'
 
 const Monitors = () => {
     const {addTocart,addToFavourite,fav}=useContext(CartContext);
@@ -17,6 +18,13 @@ const Monitors = () => {
         top: 0,
         });
     }, [pathname]);
+    useEffect(() => {
+            AOS.init({
+            duration: 1000, 
+            once: true,
+            offset: 200,
+        })
+    },[]);
   return (
     <section>
        <Banner imageBanner={MonitorsBanner} title="Monitors Gaming"/>

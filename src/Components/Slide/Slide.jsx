@@ -8,10 +8,10 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
-import slide1 from '../../assets/SlideImage1.jpg'
+import slide1 from '../../assets/SlideComputer.jpg'
 import slide2 from '../../assets/Slideimage2.jpg'
-import slide3 from '../../assets/Slideimage3.jpg'
-import slide4 from '../../assets/Slideimage4.jpg'
+import slide3 from '../../assets/SlideKeyboard.jpg'
+import slide4 from '../../assets/SlideImageMouse.webp'
 
 const Slide = () => {
   return (

@@ -27,7 +27,7 @@ const DetailProducts = () => {
   return (
     <section>
         <div className="py-20 flex flex-col items-center justify-center bg-gradient-to-b text-white px-10 mx-auto max-w-[1440px]">
-        <h1 data-aos="fade-down" className='text-3xl text-white w-full text-center dark:[text-shadow:0_0_10px_#000000,0_0_20px_#000000,0_0_40px_#000000,0_0_50px_#000000] [text-shadow:0_0_10px_#ffffff,0_0_20px_#ffffff,0_0_40px_#ffffff,0_0_50px_#ffffff] font-bold my-10 mt-20'>Detail About Proudct</h1>
+        <h4 data-aos="fade-down" className='text-3xl text-white dark:text-fuchsia-500 w-full text-center  font-bold my-10 mt-20'>Detail About Proudct</h4>
         <div
             data-aos="fade-up"
             className="w-full dark:border-zinc-400 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row lg:max-h-[400px]"
@@ -62,8 +62,6 @@ const DetailProducts = () => {
             <p className="text-gray-300 dark:text-black leading-relaxed border-t border-white/20 lg:pt-3">{detailProduct.description}</p>
 
             <button
-                data-aos="fade-up"
-                data-aos-delay="400"
                 onClick={() => addTocart(detailProduct)}
                 className="lg:mt-6 flex items-center justify-center gap-2 py-3 px-5 text-lg font-bold rounded-xl bg-gradient-to-r from-fuchsia-500 via-purple-500 to-indigo-500 hover:from-fuchsia-600 hover:to-indigo-600 transition-all duration-300 shadow-lg hover:shadow-fuchsia-500/30"
             >

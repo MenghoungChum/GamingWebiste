@@ -181,6 +181,7 @@ const Navbar = () => {
                             className={`text-white z-20 lg:px-5 px-2 py-3 lg:py-2 md:px-5 md:py-3 rounded-lg text-sm lg:text-base  bottom-4 flex items-center cursor-pointer gap-2 transition-all duration-300 ease-in-out bg-linear-to-r from-red-500 via-pink-500 to-red-500`}><span><MdOutlineRemoveShoppingCart /></span><span>Remove All</span>
                         </button>
                         <button 
+                            onClick={()=>navigate('profile')}
                             className={`text-white z-20 lg:px-5 px-2 lg:py-2 md:px-5 py-3 md:py-3  rounded-lg text-sm lg:text-base bottom-4 flex items-center cursor-pointer gap-2 transition-all duration-300 ease-in-out bg-linear-to-r from-purple-500 to-fuchsia-500`}><span><LuShoppingCart /></span><span>Buy Now</span>
                         </button>
                     </div>
@@ -193,7 +194,7 @@ const Navbar = () => {
                     <span 
                     onClick={()=>setSearch(false)}
                     className='absolute top-5 right-5 text-2xl cursor-pointer w-8 h-8 rounded-full hover:bg-red-500 flex justify-center items-center transition-all duration-300 ease-in-out active:bg-red-800 hover:text-white text-white'><FaXmark /></span>
-                    <div className='w-full lg:h-[80px] bg-fuchsia-300 rounded-lg'>
+                    <div className='w-full lg:h-[60px] bg-fuchsia-300 rounded-lg'>
                         <input
                             value={query}
                             onChange={(e)=>setQuery(e.target.value)}
@@ -213,7 +214,7 @@ const Navbar = () => {
                                             setSearch(false)
                                             setQuery('')
                                         }}
-                                        className='h-[110px] flex items-center cursor-pointer rounded-lg overflow-hidden bg-white '>
+                                        className='max-h-[90px] flex items-center cursor-pointer rounded-lg overflow-hidden bg-white '>
                                             <div className='w-[130px] h-full bg-red-500'>
                                                 <img src={item.image} className='w-full h-full object-cover' alt="" />
                                             </div>
