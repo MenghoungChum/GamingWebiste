@@ -1,4 +1,4 @@
-import React, { use, useContext, useEffect, useState } from 'react'
+import React, { use, useContext, useEffect, useRef, useState } from 'react'
 import { BsLightningCharge } from 'react-icons/bs'
 import { FaBars, FaHeart, FaMinus, FaPlus } from 'react-icons/fa'
 import { FaCartShopping, FaXmark } from 'react-icons/fa6'
@@ -21,6 +21,7 @@ const Navbar = () => {
     const navigate=useNavigate();
     const filterProduct= AllProductsList.filter(item=>item.name.toLowerCase().includes(query.toLowerCase()))
     const [active,setActive]=useState('Home');
+      const sidebarRef = useRef(null);
     // HandleLogout
     const handleLogout=()=>{
         localStorage.removeItem("loggedInUser");
@@ -28,6 +29,23 @@ const Navbar = () => {
         localStorage.removeItem("favCart");
     }
     const userLogin=JSON.parse(localStorage.getItem("loggedInUser"));
+
+    //click out side to close side bar
+
+  // Function to handle clicks outside
+    const handleClickOutside = (event) => {
+        if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setToggle(false);
+        setAddToggle(false)
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
   return (
     <div>
         <header data-aos="fade-down" className='bg-white/20 dark:bg-black/45 backdrop-blur-3xl z-50 fixed w-full top-0'>
@@ -96,7 +114,7 @@ const Navbar = () => {
                 </div>
             </nav>
             {/* Side bar */}
-            <div className={`md:w-[50%] w-[75%] fixed lg:hidden  h-[calc(100vh-14vh)] left-0 border-0 bg-zinc-600 transform ${toggle ? 'translate-x-0' : '-translate-x-full'} transition-all duration-300 ease-in-out`}>
+            <div ref={sidebarRef} className={`md:w-[50%] w-[75%] fixed lg:hidden  h-[calc(100vh-14vh)] left-0 border-0 bg-zinc-600 transform ${toggle ? 'translate-x-0' : '-translate-x-full'} transition-all duration-300 ease-in-out`}>
                 <ul className='mt-5'>
                     {
                         navbar.map(item=>(
@@ -130,7 +148,7 @@ const Navbar = () => {
                 </div>
             </div>
             {/* Add to card side */}
-            <div className={`lg:w-[30%] w-[75%] md:w-1/2 fixed right-0 z-40 h-[calc(100vh-10vh)] bg-gradient-to-r from-[#1a0026] via-[#001a26] to-[#001a1a] dark:from-zinc-300 dark:via-zinc-300 dark:to-zinc-300 dark:backdrop-blur-2xl transform ${addToggle ? 'translate-x-0' : 'translate-x-full'} transition-all duration-300 ease-in-out`}>
+            <div ref={sidebarRef}  className={`lg:w-[30%] w-[75%] md:w-1/2 fixed right-0 z-40 h-[calc(100vh-10vh)] bg-gradient-to-r from-[#1a0026] via-[#001a26] to-[#001a1a] dark:from-zinc-300 dark:via-zinc-300 dark:to-zinc-300 dark:backdrop-blur-2xl transform ${addToggle ? 'translate-x-0' : 'translate-x-full'} transition-all duration-300 ease-in-out`}>
                 <header className='w-full h-[100px] border-b border-b-zinc-500 flex items-center p-4 relative'>
                     <h4 className='lg:text-4xl text-2xl font-bold text-white [text-shadow:0_0_10px_#ff65ff,0_0_20px_#ff65ff,0_0_30px_#ff65ff] flex items-center gap-3'><LuClipboardList /> Product List</h4>
                     <span 
