@@ -19,7 +19,7 @@ import AllProducts from './Components/AllProduct/AllProducts'
 import Chatbot from './Components/Chatbot/Chatbot'
 
 const App = () => {
-  const router=createHashRouter([
+  const router=createBrowserRouter([
     {
       path: '/',
       element: <Layout/>,
