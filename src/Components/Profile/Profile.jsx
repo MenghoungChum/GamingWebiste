@@ -155,8 +155,8 @@ const Profile = () => {
             <p className="text-xl text-white dark:text-black">{isLogin.username}</p>
           </div>
         </div>
-        <h4 className="text-4xl font-medium text-white dark:text-black">Sopping Cart</h4>
-        <p className="text-zinc-500 mt-2 mb-6">{cart.length} item added</p>
+        <h4 className="md:text-4xl text-3xl mt-6 font-medium text-white dark:text-black px-10">Sopping Cart</h4>
+        <p className="text-zinc-500 mt-2 mb-6 px-10">{cart.length} item added</p>
         <div className="w-full flex  gap-10 flex-wrap">
           <div className="lg:w-[68%] w-full h-full flex-wrap">
             {/* card */}
@@ -216,35 +216,37 @@ const Profile = () => {
             </table> 
           </div>
           {/*Payment  */}
-          <div className="lg:w-[28%] w-full px-10 h-fit rounded-xl  bg-gradient-to-br from-[#1a0b1f] via-[#0c0612] to-[#0a0b14] dark:bg-gradient-to-tl dark:from-white dark:via-gray-200 dark:to-white sticky top-28  shadow-[0_0_10px_#cbcbcb] p-8">
-            <h5 className="text-white mb-10 text-2xl font-bold dark:text-black">Order Summary</h5>
-            <div>
-              <div className="flex justify-between items-center">
-                <p className="text-white dark:text-black">Total Price</p>
-                <p className="text-white dark:text-black">$ {totalPrice}</p>
+          <div className="px-10 md:px-0 w-full lg:w-[28%] ">
+            <div className="w-full px-10 h-fit rounded-xl  bg-gradient-to-br from-[#1a0b1f] via-[#0c0612] to-[#0a0b14] dark:bg-gradient-to-tl dark:from-white dark:via-gray-200 dark:to-white sticky top-28  shadow-[0_0_10px_#cbcbcb] p-8">
+              <h5 className="text-white mb-10 text-2xl font-bold dark:text-black">Order Summary</h5>
+              <div>
+                <div className="flex justify-between items-center">
+                  <p className="text-white dark:text-black">Total Price</p>
+                  <p className="text-white dark:text-black">$ {totalPrice}</p>
+                </div>
+                <div className="flex justify-between items-center">
+                  <p className="text-white my-4 dark:text-black">Total QTY</p>
+                  <p className="text-white dark:text-black">{totalQty}</p>
+                </div>
+                <div className="flex justify-between items-center">
+                  <p className="text-white my-4 dark:text-black">Discount</p>
+                  <p className="text-white dark:text-black">{discount===0.05 ? 5 : discount===0.1 ? 10 : discount===0.15 ? 15 : 0 } %</p>
+                </div>
               </div>
+              <hr className="text-white my-3 dark:text-black" />
               <div className="flex justify-between items-center">
-                <p className="text-white my-4 dark:text-black">Total QTY</p>
-                <p className="text-white dark:text-black">{totalQty}</p>
+                <p className="text-white text-xl font-bold dark:text-black">Payment</p>
+                <p className="text-white text-xl font-bold dark:text-black">$ {totalPrice -(totalPrice*discount)}</p>
               </div>
-              <div className="flex justify-between items-center">
-                <p className="text-white my-4 dark:text-black">Discount</p>
-                <p className="text-white dark:text-black">{discount===0.05 ? 5 : discount===0.1 ? 10 : discount===0.15 ? 15 : 0 } %</p>
+              <div className="flex flex-col gap-5">
+                <button 
+                onClick={()=>setShowPay(!showPay)}
+                className=" w-full py-2 rounded-lg bg-white text-black mt-6 dark:bg-black dark:text-white cursor-pointer hover:bg-gray-400 active:bg-gray-600 transition-all duration-300 ease-in-out">Process to pay</button>
+                <button 
+                onClick={()=>navigate('/')}
+                className="text-white  w-full py-2 dark:text-black bg-black rounded-lg border border-gray-500 cursor-pointer hover:bg-zinc-400 active:bg-zinc-600 transition-all duration-300 ease-in-out dark:bg-white">Continue shopping</button>
+                <p className="text-white text-center dark:text-black">Secure checkout powered by Stripe</p>
               </div>
-            </div>
-            <hr className="text-white my-3 dark:text-black" />
-            <div className="flex justify-between items-center">
-              <p className="text-white text-xl font-bold dark:text-black">Payment</p>
-              <p className="text-white text-xl font-bold dark:text-black">$ {totalPrice -(totalPrice*discount)}</p>
-            </div>
-            <div className="flex flex-col gap-5">
-              <button 
-              onClick={()=>setShowPay(!showPay)}
-              className=" w-full py-2 rounded-lg bg-white text-black mt-6 dark:bg-black dark:text-white cursor-pointer hover:bg-gray-400 active:bg-gray-600 transition-all duration-300 ease-in-out">Process to pay</button>
-              <button 
-              onClick={()=>navigate('/')}
-              className="text-white  w-full py-2 dark:text-black bg-black rounded-lg border border-gray-500 cursor-pointer hover:bg-zinc-400 active:bg-zinc-600 transition-all duration-300 ease-in-out dark:bg-white">Continue shopping</button>
-              <p className="text-white text-center dark:text-black">Secure checkout powered by Stripe</p>
             </div>
           </div>
         </div>
