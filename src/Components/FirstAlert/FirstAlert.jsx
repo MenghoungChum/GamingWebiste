@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import AlertImage from '../../../public/Poster.jpg'
 const FirstVisitAlert = () => {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -28,7 +28,7 @@ const FirstVisitAlert = () => {
               ✕
             </button>
             <img
-              src="/public/Poster.jpg"
+              src={AlertImage}
               alt="Welcome"
               className="w-full mt-10"
             />
