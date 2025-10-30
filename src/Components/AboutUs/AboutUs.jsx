@@ -46,7 +46,7 @@ const AboutUs = () => {
                   <p data-aos="zoom-in" className='text-white mb-4 dark:text-black'>Today, we've grown into a trusted name in the gaming industry, serving thousands of gamers worldwide with cutting-edge hardware, expert advice, and unwavering dedication to the gaming community.</p>
                 </div>
                 <div className='lg:w-1/2 w-full mb-20 lg:mb-0'>
-                  <div data-aos="zoom-in" className='lg:w-[80%] w-full rounded-lg overflow-hidden shadow-fuchsia-400 dark:shadow-black shadow-2xl'>
+                  <div data-aos="zoom-in" className='lg:w-[80%] w-full rounded-lg overflow-hidden shadow-fuchsia-400 dark:shadow-fuchsia-400 shadow-lg'>
                     <img src={AboutImage} className='w-full h-full object-contain' alt="" />
                   </div>
                 </div>
