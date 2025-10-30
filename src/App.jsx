@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from './Components/Home/Home'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom'
 import GaminPC from './Components/GamingPC/GaminPC'
 import Layout from './Components/Layout/Layout'
 import Console from './Components/Console/Console'
@@ -19,7 +19,7 @@ import AllProducts from './Components/AllProduct/AllProducts'
 import Chatbot from './Components/Chatbot/Chatbot'
 
 const App = () => {
-  const router=createBrowserRouter([
+  const router=createHashRouter([
     {
       path: '/',
       element: <Layout/>,
