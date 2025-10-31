@@ -1,10 +1,11 @@
 
 
-import React, { use, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import React, { use, useEffect, useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import previewImage from '../../assets/Preview.png'
 import { FaLock, FaLockOpen, FaUserAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import AOS from 'aos'
 import Background from '../../assets/BackloginRegister.gif'
 
 const Login = () => {
@@ -14,6 +15,7 @@ const Login = () => {
     const [image,setImage]=useState(null);
      const [preview, setPreview] = useState(null);
     const [showPassword,setShowPassword]=useState(false)
+    const {pathname}=useLocation();
     const navigate=useNavigate();
     // handleSubmite
     const handleSubmit = async (e) => {
@@ -66,7 +68,18 @@ const Login = () => {
       setPreview(URL.createObjectURL(file));
     }
   };
-
+  useEffect(() => {
+      window.scrollTo({
+      top: 0,
+      });
+  }, [pathname]);
+  useEffect(() => {
+          AOS.init({
+          duration: 1000, 
+          once: true,
+          offset: 200,
+      })
+  },[]);
 
   return (
     <div className={`flex justify-center items-center h-screen bg-cover bg-no-repeat bg-center px-8`} style={{backgroundImage: `url(${Background})`}}>
