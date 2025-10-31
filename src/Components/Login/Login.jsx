@@ -11,7 +11,7 @@ const Login = () => {
     const [showPassword,setShowpassword]=useState(false)
     const navigate=useNavigate();
     const handleLogin=(e)=>{
-        // e.preventDefault();
+        e.preventDefault();
 
         const allUsers=JSON.parse(localStorage.getItem("users")|| "[]");
          if (allUsers.length === 0) {
