@@ -144,7 +144,7 @@ const Navbar = () => {
                     <div className='lg:hidden'>
                         {!userLogin ?<Link to='/login' className='px-5 py-2 rounded-lg text-white bg-zinc-500 cursor-pointer'>Login</Link> : <a to='#' 
                         onClick={()=>handleLogout()}
-                        className='px-5 z-10 py-2 rounded-lg text-white bg-zinc-500 cursor-pointer'>Logout</a>}
+                        className='px-5 z-10 py-2 rounded-lg text-white bg-red-500 cursor-pointer'>Logout</a>}
                     </div>
                     <DarkMode/>
                 </div>
