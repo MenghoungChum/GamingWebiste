@@ -10,6 +10,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { BiSolidCommentDetail } from 'react-icons/bi'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FaHeart } from 'react-icons/fa6'
 
 const HeadPhone = () => {
     const {addTocart,addToFavourite,fav}=useContext(CartContext);
