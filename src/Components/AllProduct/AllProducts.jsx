@@ -78,7 +78,7 @@ const AllProducts = () => {
                             onChange={(e) => setSelectedCategory(e.target.value)}
                         >
                             <option value="All" className='bg-black dark:bg-white dark:text-black'>All</option>
-                            <option value="Gaming PC" className='bg-black dark:bg-white dark:text-black'>Gaming PC</option>
+                            <option value="Computer" className='bg-black dark:bg-white dark:text-black'>Computer</option>
                             <option value="Console" className='bg-black dark:bg-white dark:text-black'>Console</option>
                             <option value="Keyboard" className='bg-black dark:bg-white dark:text-black'>Keyboard</option>
                             <option value="Mouse" className='bg-black dark:bg-white dark:text-black'>Mouse</option>

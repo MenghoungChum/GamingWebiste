@@ -31,5 +31,5 @@ const ProdudFeature = () => {
   )
 }
 
-const productCategory=['All','Gaming PC','Console','Keyboard','Mouse','HeadPhone','Monitor'];
+const productCategory=['All','Computer','Console','Keyboard','Mouse','HeadPhone','Monitor'];
 export default ProdudFeature

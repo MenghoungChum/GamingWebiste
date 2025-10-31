@@ -22,7 +22,7 @@ const LatestNew = () => {
             <div className='flex flex-wrap mt-16 gap-6 md:gap-3'>
                 {
                     latestNew.map(item=>(
-                        <div data-aos="zoom-in" data-aos-delay={item.id*200} key={item.id} className='md:w-[32%] w-full md:h-[500px] border border-white dark:border-zinc-500 hover:border-purple-500 rounded-2xl cursor-pointer group pt-5 hover:sha dark:text-blackdow-[0_0_10px_#b103b1ea] dark:bg-linear-to-tl dark:from-transparent dark:to-transparent transition-all duration-300 ease-in-out'>
+                        <div data-aos="zoom-in" data-aos-delay={item.id*200} key={item.id} className='md:w-[32%] w-full lg:h-[500px] md:h-[630px] border border-white dark:border-zinc-500 hover:border-purple-500 rounded-2xl cursor-pointer group pt-5 hover:sha dark:text-blackdow-[0_0_10px_#b103b1ea] dark:bg-linear-to-tl dark:from-transparent dark:to-transparent transition-all duration-300 ease-in-out'>
                             <div className='w-full h-[60%] overflow-hidden relative'>
                                 <img src={item.image} className='w-full h-full object-cover group-hover:scale-110 duration-300 transition-all ease-in-out' alt="" />
                                 <span className=' bg-purple-300/20 rounded-full px-4 py-1 text-purple-500 shadow-[inset_0_0_10px_#b103b1ea] absolute top-5 left-5 '>{item.slogan}</span>

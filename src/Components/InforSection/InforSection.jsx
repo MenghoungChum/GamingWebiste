@@ -15,7 +15,7 @@ const InforSection = () => {
   return (
     <section>
         <div className='max-w-[1440px] px-10 mx-auto py-20'>
-            <div className='flex justify-between w-full md:h-[450px] flex-wrap'>
+            <div className='flex justify-between w-full lg:h-[450px] md:h-[530px] flex-wrap'>
                 <div data-aos="zoom-in" className='md:w-[48%] w-full h-full dark:bg-transparent bg-fuchsia-500/10 mb-5 backdrop-blur-2xl rounded-2xl border border-fuchsia-500 px-12 py-16'>
                     <div className='flex items-center gap-2 px-4 dark:border-pink-500 dark:text-red-700 py-1 rounded-full border border-red-500 bg-red-300/20 w-fit text-red-500'>
                         <span><AiOutlineFire /></span>

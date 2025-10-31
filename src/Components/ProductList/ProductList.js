@@ -50,7 +50,7 @@ import MinitorsGaming8 from '../../assets/Monitor8.jpg'
 export const computerGaming = [
   {
     id: 1,
-    category: 'Gaming PC',
+    category: 'Computer',
     name: 'Predator Helios 300',
     rating: '4.8',
     reveiw: '(123 reviews)',
@@ -68,7 +68,7 @@ export const computerGaming = [
   },
   {
     id: 2,
-    category: 'Gaming PC',
+    category: 'Computer',
     name: 'MSI Raider GE76',
     rating: '4.6',
     reveiw: '(98 reviews)',
@@ -86,7 +86,7 @@ export const computerGaming = [
   },
   {
     id: 3,
-    category: 'Gaming PC',
+    category: 'Computer',
     name: 'ASUS ROG Strix G15',
     rating: '4.7',
     reveiw: '(210 reviews)',
@@ -104,7 +104,7 @@ export const computerGaming = [
   },
   {
     id: 4,
-    category: 'Gaming PC',
+    category: 'Computer',
     name: 'Alienware x17 R2',
     rating: '4.9',
     reveiw: '(145 reviews)',
@@ -122,7 +122,7 @@ export const computerGaming = [
   },
   {
     id: 5,
-    category: 'Gaming PC',
+    category: 'Computer',
     name: 'Razer Blade 15',
     rating: '4.7',
     reveiw: '(134 reviews)',
@@ -140,7 +140,7 @@ export const computerGaming = [
   },
   {
     id: 6,
-    category: 'Gaming PC',
+    category: 'Computer',
     name: 'HP Omen 17',
     rating: '4.5',
     reveiw: '(89 reviews)',
@@ -158,7 +158,7 @@ export const computerGaming = [
   },
   {
     id: 7,
-    category: 'Gaming PC',
+    category: 'Computer',
     name: 'Lenovo Legion 7',
     rating: '4.6',
     reveiw: '(102 reviews)',
@@ -176,7 +176,7 @@ export const computerGaming = [
   },
   {
     id: 8,
-    category: 'Gaming PC',
+    category: 'Computer',
     name: 'Gigabyte Aorus 15G',
     rating: '4.4',
     reveiw: '(76 reviews)',
