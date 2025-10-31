@@ -57,7 +57,7 @@ const Live = () => {
             {/* Video Popup */}
             {selectedVideo && (
                 <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
-                    <div className="rounded-lg shadow-lg w-[90%] md:w-[700px] relative z-30">
+                    <div className="rounded-lg shadow-lg w-[80%] md:w-[700px] relative z-30">
                         <button
                             onClick={() => setSelectedVideo(null)}
                             className="absolute -top-2 -right-8 opacity-70 hover:opacity-100 transition-all duration-300 ease-in-out text-white dark:text-white text-xl"
