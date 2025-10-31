@@ -58,9 +58,9 @@ const AllProducts = () => {
             
             <div className={`${showFilter ? 'lg:w-[25%] md:w-[40%] w-full h-auto' : 'w-0'}  overflow-hidden transition-all duration-300 ease-in-out`}>
                 
-                <div className="flex flex-col gap-6 bg-gray-100 p-4 rounded-lg mb-8">
+                <div className="flex flex-col gap-6 bg-gradient-to-br from-[#1a0b1f] via-[#0c0612] border border-white to-[#0a0b14] dark:bg-gradient-to-br dark:from-transparent dark:via-transparent dark:to-transparent dark:border-zinc-500 p-4 rounded-lg mb-8">
                     <div className='flex justify-between items-center'>
-                        <h1 className="text-2xl font-bold mb-4">🛒 Product Filter</h1>
+                        <h1 className="text-2xl font-bold mb-4 text-white dark:text-black">🛒 Product Filter</h1>
                         <div className='hidden md:block'>
                             <span
                             className='w-10 h-10 rounded-lg bg-fuchsia-500 text-white flex justify-center items-center'
@@ -71,30 +71,30 @@ const AllProducts = () => {
                         </div>
                     </div>
                     <div>
-                        <h2 className="font-semibold mb-2">Category</h2>
+                        <h2 className="font-semibold mb-2 text-white dark:text-black">Category</h2>
                         <select
-                            className="border border-gray-300 rounded-md p-2 w-full"
+                            className="border border-gray-300 rounded-md p-2 w-full text-white dark:text-black"
                             value={selectedCategory}
                             onChange={(e) => setSelectedCategory(e.target.value)}
                         >
-                            <option value="All">All</option>
-                            <option value="Gaming PC">Gaming PC</option>
-                            <option value="Console">Console</option>
-                            <option value="Keyboard">Keyboard</option>
-                            <option value="Mouse">Mouse</option>
-                            <option value="HeadPhone">HeadPhone</option>
-                            <option value="Monitor">Monitor</option>
+                            <option value="All" className='bg-black dark:bg-white dark:text-black'>All</option>
+                            <option value="Gaming PC" className='bg-black dark:bg-white dark:text-black'>Gaming PC</option>
+                            <option value="Console" className='bg-black dark:bg-white dark:text-black'>Console</option>
+                            <option value="Keyboard" className='bg-black dark:bg-white dark:text-black'>Keyboard</option>
+                            <option value="Mouse" className='bg-black dark:bg-white dark:text-black'>Mouse</option>
+                            <option value="HeadPhone" className='bg-black dark:bg-white dark:text-black'>HeadPhone</option>
+                            <option value="Monitor" className='bg-black dark:bg-white dark:text-black'>Monitor</option>
                         </select>
                     </div>
 
                     {/* Price Filter (Radio Buttons) */}
                     <div>
-                        <h2 className="font-semibold mb-2">Price Range</h2>
+                        <h2 className="font-semibold mb-2 text-white dark:text-black">Price Range</h2>
                         <div className="flex flex-col space-y-2">
                             {priceRanges.map((range) => (
                             <label
                                 key={range.label}
-                                className="flex items-center space-x-2 cursor-pointer"
+                                className="flex items-center space-x-2 cursor-pointer text-white dark:text-black"
                             >
                                 <input
                                 type="radio"
