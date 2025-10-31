@@ -157,7 +157,7 @@ const Navbar = () => {
                     onClick={()=>setAddToggle(false)}
                     className='absolute w-8 h-8 rounded-full hover:bg-red-500 hover:text-white text-white transition-all duration-300 ease-in-out lg:top-3 right-6 top-3 lg:right-3 flex items-center justify-center lg:text-3xl text-xl'><MdClear /></span>
                 </header>
-                <div className='p-3 flex flex-col gap-4 w-full md:max-h-[670px] max-h-[460px] bg-amber-400 lg:max-h-[510px] overflow-scroll deleteScroll'>
+                <div className='p-3 flex flex-col gap-4 w-full md:max-h-[670px] max-h-[460px] lg:max-h-[510px] overflow-scroll deleteScroll'>
                     {
                         cart.length >0 ? (
                             cart.map(item=>(
