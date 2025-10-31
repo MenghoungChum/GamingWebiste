@@ -36,7 +36,7 @@ const GaminPC = () => {
             <div
             data-aos="zoom-in"
             data-aos-delay={item.id*200}
-             key={item.id} className={`lg:w-[23%] w-full md:w-[31%] lg:h-[460px] bg-zinc-800 rounded-2xl cursor-pointer group border dark:bg-transparent overflow-hidden transition-all duration-300 ease-in-out ${item.shadow} ${item.borderColor}`}>
+             key={item.id} className={`lg:w-[23%] w-full md:w-[31%] lg:h-[440px] md:h-[430px] h-[400px] bg-zinc-800 rounded-2xl cursor-pointer group border dark:bg-transparent overflow-hidden transition-all duration-300 ease-in-out ${item.shadow} ${item.borderColor}`}>
                 <div className='w-full pt-5 relative h-[60%] cursor-pointer overflow-hidden'>
                     <img src={item.image} className='w-full h-full object-cover group-hover:scale-105 transition-all duration-300 ease-in-out' alt="" />
                     <div className='w-full flex items-center absolute top-5 p-3 justify-between'>
@@ -61,7 +61,7 @@ const GaminPC = () => {
                     {/* Overlay */}
                     <div className='w-full h-full bg-linear-to-t opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out from-black to-transparent absolute inset-0 pointer-events-none'></div>
                 </div>
-                <div className='p-4'>
+                <div className='p-4 h-[40%] flex flex-col justify-center'>
                     <h3 className={`${item.hoverText} text-white text-lg mt-3 font-medium transition-all duration-300 ease-in-out dark:text-black`}>{item.name}</h3>
                     <div className='flex items-center gap-2 my-3'>
                         <span className={`${item.textColor}`}><IoStar /></span>
