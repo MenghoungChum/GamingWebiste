@@ -1,15 +1,17 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaLock, FaLockOpen, FaUserAlt } from 'react-icons/fa';
 import { IoLockClosedOutline } from 'react-icons/io5';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Background from '../../assets/BackloginRegister.gif'
+import AOS from 'aos'
 
 const Login = () => {
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("")
     const [showPassword,setShowpassword]=useState(false)
     const navigate=useNavigate();
+    const {pathname}=useLocation();
     const handleLogin=(e)=>{
         e.preventDefault();
 
@@ -36,6 +38,18 @@ const Login = () => {
         setEmail("")
         setPassword("")
     }
+    useEffect(() => {
+          window.scrollTo({
+          top: 0,
+          });
+      }, [pathname]);
+      useEffect(() => {
+              AOS.init({
+              duration: 1000, 
+              once: true,
+              offset: 200,
+          })
+      },[]);
   return (
     <div className="flex justify-center items-center h-screen bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url(${Background})`}}>
         <div className='flex justify-center items-center'>
