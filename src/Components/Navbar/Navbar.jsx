@@ -142,7 +142,7 @@ const Navbar = () => {
                 </div>
                 <div className='flex justify-between items-center px-3 py-3 w-full'>
                     <div className='lg:hidden'>
-                        {!userLogin ?<Link to='/login' className='px-5 py-2 rounded-lg text-white bg-zinc-500 cursor-pointer'>Login</Link> : <a to='#' 
+                        {!userLogin ?<Link to='/login' className='px-5 py-2 rounded-lg text-white bg-zinc-500 cursor-pointer'>Login</Link> : <a href='#' 
                         onClick={()=>handleLogout()}
                         className='px-5 z-10 py-2 rounded-lg text-white bg-red-500 cursor-pointer'>Logout</a>}
                     </div>

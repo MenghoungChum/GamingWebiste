@@ -13,7 +13,7 @@ const Login = () => {
     const navigate=useNavigate();
     const {pathname}=useLocation();
     const handleLogin=(e)=>{
-        e.preventDefault();
+        // e.preventDefault();
 
         const allUsers=JSON.parse(localStorage.getItem("users")|| "[]");
          if (allUsers.length === 0) {
