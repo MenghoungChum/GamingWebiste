@@ -142,9 +142,9 @@ const Navbar = () => {
                 </div>
                 <div className='flex justify-between items-center px-3 py-3 w-full'>
                     <div className='lg:hidden'>
-                        {!userLogin ?<Link to='/login' className='px-5 py-2 rounded-lg text-white bg-zinc-500 cursor-pointer'>Login</Link> : <Link to='/' 
+                        {!userLogin ?<Link to='/login' className='px-5 py-2 rounded-lg text-white bg-zinc-500 cursor-pointer'>Login</Link> : <a to='#' 
                         onClick={()=>handleLogout()}
-                        className='px-5 z-10 py-2 rounded-lg text-white bg-zinc-500 cursor-pointer'>Logout</Link>}
+                        className='px-5 z-10 py-2 rounded-lg text-white bg-zinc-500 cursor-pointer'>Logout</a>}
                     </div>
                     <DarkMode/>
                 </div>
